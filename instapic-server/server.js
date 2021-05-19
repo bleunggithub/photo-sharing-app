@@ -7,12 +7,15 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require("express-fileupload");
 
 //set up db, SQL query builder
+const { production } = require('./knexfile')
 const { development } = require('./knexfile')
 const { test } = require('./knexfile')
 
 let environment
 if (process.env.NODE_ENV === 'test') {
     environment = test
+} else if (process.env.NODE_ENV === 'production') {
+    environment = production
 } else {
     environment = development
 }

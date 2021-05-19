@@ -22,7 +22,8 @@ export const FetchAPI = () => {
         axios.get(`${process.env.REACT_APP_API_SERVER}/api/posts?page=${page}&sort=${sort}`,
             {
                 headers: {Authorization: `Bearer ${user.accessToken}`},
-                withCredentials: true
+                withCredentials: true,
+                credentials: 'include'
             })
             .then(res => {
                 if (res.data.accessToken) {

@@ -15,8 +15,9 @@ export const SearchAPI = (setPosts, setStatus) => {
         }
 
         axios.get(`${process.env.REACT_APP_API_SERVER}/api/search?username=${input}`, {
-                headers: {Authorization: `Bearer ${user.accessToken}`},
-                withCredentials: true
+            headers: {Authorization: `Bearer ${user.accessToken}`},
+            withCredentials: true,
+            credentials: 'include'
             }).then(res => {
                 if (res.data.accessToken) {
                     const { accessToken, authenticated } = res.data

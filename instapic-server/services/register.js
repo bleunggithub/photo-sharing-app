@@ -27,7 +27,7 @@ module.exports.register = async (req, res, knex) => {
                 })
 
                 const refreshToken = createRefreshToken(userId[0], 1)
-                res.cookie('zed', refreshToken, { httpOnly: true })
+                res.cookie('zed', refreshToken, { httpOnly: true, sameSite: 'none', secure: true })
 
                 const accessToken = createAccessToken(userId[0])
 

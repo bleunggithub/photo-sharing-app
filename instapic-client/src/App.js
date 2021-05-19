@@ -11,7 +11,8 @@ function App() {
   
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_SERVER}/users/refresh_token`, {
-      withCredentials: true
+      withCredentials: true,
+      credentials: 'include'
     }).then(res => {
       if (res.data.authenticated) {
         setUser(res.data)

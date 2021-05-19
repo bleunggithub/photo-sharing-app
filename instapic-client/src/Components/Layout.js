@@ -15,7 +15,10 @@ const Layout = ({ children }) => {
     const { setUser } = useContext(UserContext)
 
     const handleLogOut = () => {
-        axios.get(`${process.env.REACT_APP_API_SERVER}/users/logout`,{withCredentials:true} )
+        axios.get(`${process.env.REACT_APP_API_SERVER}/users/logout`, {
+            withCredentials: true,
+            credentials: 'include'
+        })
         .then(res => {
             console.log(res.data.message)
             setUser(null)

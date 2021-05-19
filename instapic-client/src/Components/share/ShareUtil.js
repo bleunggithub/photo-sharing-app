@@ -26,7 +26,8 @@ export const UploadAPI = () => {
             uploadImgFormData,
             {
                 headers: {
-                    Authorization: `Bearer ${user.accessToken}`
+                    Authorization: `Bearer ${user.accessToken}`,
+                    credentials: 'include'
                 },
                 withCredentials: true
             }).then(res => {

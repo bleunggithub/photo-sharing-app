@@ -25,7 +25,10 @@ export const LoginAPI = (apiRoute) => {
 
         axios.post(`${process.env.REACT_APP_API_SERVER}/users/${apiRoute}`, {
             username, password
-        },{withCredentials:true}).then(res => {
+        }, {
+            withCredentials: true,
+            credentials: 'include'
+        }).then(res => {
 
             if (!res.data) {
                 setErrorMessage(["An Error has occurred, please try again."])

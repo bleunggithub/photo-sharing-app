@@ -31,7 +31,7 @@ module.exports.login = async (req, res, knex) => {
                         .returning('tokenVersion')
 
                     const refreshToken = createRefreshToken(id, newTokenVersion[0])
-                    res.cookie('zed', refreshToken, { httpOnly: true })
+                    res.cookie('zed', refreshToken, { httpOnly: true, sameSite: 'none', secure: true })
                     
                     const accessToken = createAccessToken(id)
                     return res.status(200).json({ authenticated: true, accessToken })
