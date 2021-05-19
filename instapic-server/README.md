@@ -2,12 +2,7 @@
 
 #### Table of Content
 
-[Installation](#installation)
-[How to run](#how-to-run)
-[Environment Variables](#environment-variables)
-[About the REST API](#about-the-rest-api)
-[JWT Refresh Token](#jwt-refresh-token)
-[Tests](#tests)
+[Installation](#installation) | [How to run](#how-to-run) | [Environment Variables](#environment-variables) | [About the REST API](#about-the-rest-api) | [JWT Refresh Token](#jwt-refresh-token) | [Tests](#tests)
 
 #### Installation
 

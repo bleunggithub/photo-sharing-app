@@ -1,14 +1,8 @@
-# InstaPic (Server)
+# InstaPic (Client)
 
 #### Table of Content
 
-[Installation](#installation)
-[How to run](#how-to-run)
-[Environment Variables](#environment-variables)
-[About the App](#about-the-app)
-[Tests](#tests)
-
-# InstaPic (Client)
+[Installation](#installation) | [How to run](#how-to-run) | [Environment Variables](#environment-variables) | [About the App](#about-the-app) | [Tests](#tests)
 
 #### Installation
 
