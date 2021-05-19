@@ -20,7 +20,7 @@
   REACT_APP_API_SERVER=
   REACT_APP_CLOUDINARY_ACC_NAME=
 
-#### About the REST API
+#### About the App
 
 - [x] Implement frontend
 - [x] Logged In users can submit post that includes an image and short text description
