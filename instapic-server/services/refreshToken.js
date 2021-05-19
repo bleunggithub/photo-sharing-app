@@ -31,7 +31,7 @@ module.exports.refreshToken = async (req, res, knex) => {
                         .returning('tokenVersion')
                     
                     const refreshToken = createRefreshToken(userId, newTokenVersion[0])
-                    res.cookie('zed', refreshToken, { httpOnly: true, sameSite: 'none', secure: true })
+                    res.cookie('zed', refreshToken, { httpOnly: true, sameSite: 'strict', secure: true })
                     
                     const accessToken = createAccessToken(user.userId)
                     return res.status(200).json({authenticated: true, accessToken})
